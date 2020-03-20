@@ -2,22 +2,22 @@
   "name": "rn-local-schedule-notifications",
   "title": "Rn Local Schedule Notifications",
   "version": "1.0.0",
-  "description": "TODO",
+  "description": "Schedule local notifications in React Native for Android",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/rn-local-schedule-notifications.git",
-    "baseUrl": "https://github.com/github_account/rn-local-schedule-notifications"
+    "url": "git+https://github.com/arfa123/rn-local-schedule-notifications.git",
+    "baseUrl": "https://github.com/arfa123/rn-local-schedule-notifications"
   },
   "keywords": [
     "react-native"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+    "name": "Arfa Ahmed",
+    "email": "aphahmed@yahoo.com"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
