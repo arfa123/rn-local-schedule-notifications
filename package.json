@@ -1,7 +1,7 @@
 {
   "name": "rn-local-schedule-notifications",
   "title": "Rn Local Schedule Notifications",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Schedule local notifications in React Native for Android",
   "main": "index.js",
   "scripts": {
@@ -30,5 +30,7 @@
     "react": "^16.9.0",
     "react-native": "^0.61.5"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
