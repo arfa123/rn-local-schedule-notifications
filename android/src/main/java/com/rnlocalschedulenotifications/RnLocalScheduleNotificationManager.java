@@ -196,6 +196,20 @@ class RnLocalScheduleNotificationManager {
         .apply();
     }
 
+    Bundle schedule = notification.getBundle("schedule");
+    Long fireDate = -1L;
+    Object fireDateObject = schedule.get("fireDate");
+    if (fireDateObject instanceof Long) {
+      fireDate = (Long) fireDateObject;
+    } else if (fireDateObject instanceof Double) {
+      Double fireDateDouble = (Double) fireDateObject;
+      fireDate = fireDateDouble.longValue();
+    }
+
+    if (fireDate >= (System.currentTimeMillis() - 60000)) {
+      displayNotification(notification, null);
+    }
+
     // if (Utils.isAppInForeground(context)) {
     //   // If the app is in the foreground, broadcast the notification to the RN Application
     //   // It is up to the JS to decide whether to display the notification
@@ -206,7 +220,7 @@ class RnLocalScheduleNotificationManager {
     //     .sendBroadcast(scheduledNotificationEvent);
     // } else {
       // If the app is in the background, then we display it automatically
-      displayNotification(notification, null);
+      // displayNotification(notification, null);
     // }
   }
 
@@ -547,6 +561,10 @@ class RnLocalScheduleNotificationManager {
       } else {
         promise.reject("notification/schedule_notification_error", "Missing fireDate information");
       }
+      return;
+    }
+
+    if (fireDate < System.currentTimeMillis()) {
       return;
     }
 
